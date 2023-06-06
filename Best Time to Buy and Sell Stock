@@ -1,0 +1,10 @@
+ public static int maximumProfit(ArrayList<Integer> arr){
+        int buy=arr.get(0);
+        int max=0;
+        for(int i=1;i<arr.size();i++){
+            if(arr.get(i)<buy)
+            buy=arr.get(i);
+            max=Math.max(max,arr.get(i)-buy);
+        }
+        return max;
+    }
